@@ -1,5 +1,3 @@
-
-
 #include "INETDefs.h"
 #include "IPvXAddress.h"
 #include "IPvXAddressResolver.h"

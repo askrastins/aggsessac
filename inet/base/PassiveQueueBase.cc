@@ -1,5 +1,3 @@
-
-
 #include <algorithm>
 
 #include "PassiveQueueBase.h"
