@@ -22,41 +22,41 @@ and copy following files to your INET directory:
 
 Copy
 --------------------
- AggSessACQueue.cc
- AggSessACQueue.h
-AggSessACQueue.ned
-DataThrQueue.cc
-DataThrQueue.h
-DataThrQueue.ned
-FIFOQueue.cc
-FIFOQueue.h
-FIFOQueue.ned
-PriorityScheduler1.cc
-PriorityScheduler1.h
+*AggSessACQueue.cc;
+*AggSessACQueue.h;
+AggSessACQueue.ned;
+DataThrQueue.cc;
+DataThrQueue.h;
+DataThrQueue.ned;
+FIFOQueue.cc;
+FIFOQueue.h;
+FIFOQueue.ned;
+PriorityScheduler1.cc;
+PriorityScheduler1.h;
 PriorityScheduler1.ned
 to your …\samples\inet\src\linklayer\queue
 -----------------------
 
-UtilizationMeter.cc
-UtilizationMeter.h
-UtilizationMeter.ned
-MultiFieldClassifier.cc
-MultiFieldClassifier.h
-MultiFieldClassifier.ned
-SYNMarker.cc
-SYNMarker.h
+UtilizationMeter.cc;
+UtilizationMeter.h;
+UtilizationMeter.ned;
+MultiFieldClassifier.cc;
+MultiFieldClassifier.h;
+MultiFieldClassifier.ned;
+SYNMarker.cc;
+SYNMarker.h;
 SYNMarker.ned
 to your …\samples\inet\src\networklayer\diffserv
 -----------------------
 
-PassiveQueueBase.cc, 
-PassiveQueueBase2.cc, 
+PassiveQueueBase.cc; 
+PassiveQueueBase2.cc; 
 PassiveQueueBase2.h 
 to your	…\samples\inet\src\base
 -----------------------
 
-IPvXTrafGen.cc
-IPvXTrafGen.h
+IPvXTrafGen.cc;
+IPvXTrafGen.h;
 IPvXTrafGen.ned
 to your … samples\inet\src\applications\generic
 
