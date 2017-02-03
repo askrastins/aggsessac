@@ -22,8 +22,8 @@ and copy following files to your INET directory:
 
 Copy
 --------------------
-AggSessACQueue.cc
-AggSessACQueue.h
+AggSessACQueue.cc/n
+AggSessACQueue.h/n
 AggSessACQueue.ned
 DataThrQueue.cc
 DataThrQueue.h
