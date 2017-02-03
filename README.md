@@ -2,8 +2,9 @@
 Aggregated Session Admission Control (AggSessAC)
 ==================================
   The author of this project has developed a new connection admission control method for high-speed internet networks. Taking into account the increasing data flow intensity (new flows/s), which on the high speed Gigabit networks has already been measured with a magnitude of 10^3 or higher, project author proposes idea to perform a temporary accumulation of a new connection requests prior to a decision making by directing a new session initialization packets to the separate queue. Connection request represents the packets that belonging to a new single data flow (session). Such action get opportunity to make to make mutual comparition among collected requests. AggSessAC is able to provide cross-evaluation of several connection requests, thus expanding the decision-making capabilities by enabling flow-level selective, priority-based and pro-active admission management. Developed AggSessAC solution that is based on short-term (us-ms) collection of requests allows to bring the virtualization of parallel processing into connection admission control and reduce uncertain conditions at the moment of decision-making. AggSessAC solution increases the quality of the admission decisions made and as a result the more accurately to fulfill the management policy.
+  
   Within AggSessAC method a new connection request accumulation is controlled by two parameters, with can be modified via TC102.ned file within aggsessac project: 
-  1) maximum waiting time - time of aggregation period for new connection request accumulation 
+  1) maximum waiting time - time of aggregation period for new connection request accumulation
   2) maximum bundle size - queue size for connection requests
 
 
