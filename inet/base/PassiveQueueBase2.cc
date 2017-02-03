@@ -43,19 +43,18 @@ void PassiveQueueBase2::initialize()
 
 void PassiveQueueBase2::handleMessage(cMessage *msg) // are triggered when packet is in queue
 {
-    //ğitais IF - lai timer self-msg packets netiktu ietvertas queue statistikâ
+    //timer self-msg message can not be included in queue statistic
     if (msg->isSelfMessage())
     {
         cMessage *timerMsg = enqueue(msg);
-        if (msg != timerMsg){} // nedaram neko
+        if (msg != timerMsg){} // nothing
     }
     else
     {
         numQueueReceived++;
         emit(rcvdPkSignal, msg);
 
-        if (packetRequested > 0)    // ğitam nevajedzçtu nekad izpildîties, izpildâs ja schedulers, ir pieprasîjis paketi, bet nevienâ rindâ tâ nav bijusi..
-        {
+        if (packetRequested > 0)    // if queue is empty - no packetRequested ...
             packetRequested--;
             emit(enqueuePkSignal, msg);
             emit(dequeuePkSignal, msg);
@@ -65,17 +64,17 @@ void PassiveQueueBase2::handleMessage(cMessage *msg) // are triggered when packe
         else
         {
             msg->setArrivalTime(simTime());
-            cMessage *droppedMsg = enqueue(msg); //ievietojam paketi rindâ, ja enqueue neatgrieş paketi atpakaï, tad pakete ir veiksmîgi ievietota rindâ
+            cMessage *droppedMsg = enqueue(msg); //insert packet in queue, (enqueue), doesn't return packet
             if (msg != droppedMsg)
                 emit(enqueuePkSignal, msg);
-            if (droppedMsg)                     // ja pakete tika atgriezta atpakaï, izdzçğam to
+            if (droppedMsg)                     // remove if packet returned - only if Queue is overloaded 
             {
                 numQueueDropped++;
                 emit(dropPkByQueueSignal, droppedMsg);
                 delete droppedMsg;
             }
             else
-            notifyListeners(); // paredzçta info nodoğanai: par jaunas pkts ierağanos rindâ tiek paziòots ScheduleBase::packetEnqueued metodei - kas izlemj vai paketi var uzreiz pieprasît vei arî jânogaida vçl
+            notifyListeners(); // notification for ScheduleBase::packetEnqueued(), that queue is not empty
         }
 
         if (ev.isGUI())
@@ -87,14 +86,14 @@ void PassiveQueueBase2::handleMessage(cMessage *msg) // are triggered when packe
     }
 }
 
-void PassiveQueueBase2::requestPacket() // izpildâs, kad schedulers pieprasa paketi
+void PassiveQueueBase2::requestPacket() // called, when scheduler request packet
 {
     Enter_Method("requestPacket()");
 
     cMessage *msg = dequeue();
     if (msg == NULL)
     {
-        packetRequested++; // ğitam AggSessAC gadijumaa nevajedzçtu nekad izpildîties jo requestPacket() var izsaukt ja rindâ ir numOfAcceptedPkt > 0
+        packetRequested++; // case with AggSessAC this is not called, because requestPacket() is called based on numOfAcceptedPkt > 0 counter
     }
     else
     {
