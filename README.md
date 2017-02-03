@@ -5,9 +5,9 @@ Aggregated Session Admission Control (AggSessAC)
   
   Within AggSessAC method a new connection request accumulation is controlled by two parameters, with can be modified via TC102.ned file within aggsessac project: 
   
-/n1) maximum waiting time - time of aggregation period for new connection request accumulation
+1) maximum waiting time - time of aggregation period for new connection request accumulation
 
-/n2) maximum bundle size - queue size for connection requests
+2) maximum bundle size - queue size for connection requests
 
 
 How to start AggSessAC project in the OMNeT++
