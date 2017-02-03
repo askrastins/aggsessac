@@ -51,8 +51,7 @@ to your …\samples\inet\src\networklayer\diffserv
 -----------------------
 
 PassiveQueueBase.cc, 
-PassiveQueueBase.h, 
-PassiveQueueBase2.c, 
+PassiveQueueBase2.cc, 
 PassiveQueueBase2.h 
 to your	…\samples\inet\src\base
 -----------------------
