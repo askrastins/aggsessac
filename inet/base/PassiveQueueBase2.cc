@@ -1,6 +1,3 @@
-//
-// Copyright (C) 2005 Andras Varga
-//
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU Lesser General Public License
 // as published by the Free Software Foundation; either version 2
@@ -19,7 +16,7 @@
 
 #include "PassiveQueueBase2.h"
 
-//Piesaistu papildus
+//add this
 #include "DiffservUtil.h"
 #include "IPv4Datagram.h"
 #include "UtilizationMeter.h"
@@ -44,7 +41,7 @@ void PassiveQueueBase2::initialize()
     WATCH(numQueueDropped);
 }
 
-void PassiveQueueBase2::handleMessage(cMessage *msg) // izpildâs, kad pakete pienâkusi rindâ
+void PassiveQueueBase2::handleMessage(cMessage *msg) // are triggered when packet is in queue
 {
     //ğitais IF - lai timer self-msg packets netiktu ietvertas queue statistikâ
     if (msg->isSelfMessage())
