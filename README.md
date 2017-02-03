@@ -67,5 +67,5 @@ Finally, can make any changes and modifications if you want.
 
 /Andris/
 
-![Screenshot](aggSessAC_screen3.png)
+![Screenshot](Screenshot1.png)
  
