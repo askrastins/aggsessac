@@ -16,7 +16,7 @@ OMNeT++ available: https://omnetpp.org/omnetpp
 After successful OMNET ++ installation is required to download The INET Framework  from the download link on the https://inet.omnetpp.org/Download.html, unpack it, and follow the instructions in the INSTALL file. Documentation and tutorials are also available above mentioned web pages. 
 
 Before you run the  AggSessAC project is necessary to supplement the INET Framework library to the my developed source (.cc), the header (.H) and (.ned) files:
-Download its from this repository /inet/ folder, which contains the necessary .cc, .h, .ned files. 
+Download its from this repository *inet* folder, which contains the necessary .cc, .h, .ned files. 
 Go to your INET framework src directory, for example: C:\...\omnetpp-4.6\samples\inet\src\
 and copy following files to your INET directory:
 
