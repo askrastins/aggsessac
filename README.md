@@ -61,7 +61,7 @@ IPvXTrafGen.ned
 to your … samples\inet\src\applications\generic
 
 
-Then you can download full AggSessAC OMNeT++ project from this repository within folder /aggsessac_project/.
+Then you can download full AggSessAC OMNeT++ project from this repository within folder =aggsessac_project=.
 
 Finally, can make any changes and modifications if you want.
 
