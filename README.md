@@ -65,7 +65,8 @@ Then you can download full AggSessAC project its available in this repository wi
 
 Finally, can make any changes and modifications if you want.
 
-/Andris/
 
 ![Screenshot](Screenshot1.png)
  
+
+/Andris/
