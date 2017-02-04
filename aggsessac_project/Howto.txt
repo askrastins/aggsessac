@@ -1,0 +1,4 @@
+Project already have (.project, .cproject, and .oppbuildspec files in the project root directory), you can simply import the project into the workspace.
+
+ 
+

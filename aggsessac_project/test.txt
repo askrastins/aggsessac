@@ -1,4 +1,0 @@
-#
-# OMNeT++/OMNEST Makefile for aggsessac
-#
-
