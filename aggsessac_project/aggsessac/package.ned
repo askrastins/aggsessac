@@ -1,0 +1,3 @@
+package aggsessac;
+
+@license(LGPL);

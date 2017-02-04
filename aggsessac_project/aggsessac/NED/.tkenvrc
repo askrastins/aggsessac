@@ -1,0 +1,7 @@
+# Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
+config default-configname	{General}
+config default-runnumber	{0}
+inspector {network1.r1.eth[1].queue.dataQueue} TC102 86 2 625x351+964+335:normal
+inspector {network1.r1.eth[1]} EthernetInterface 71 2 196x331+767+357:normal
+inspector network1.r1 Router 6 2 308x341+455+347:normal
+

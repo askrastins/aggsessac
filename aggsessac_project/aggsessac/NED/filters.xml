@@ -1,0 +1,10 @@
+<filters>
+  <experiment id="default">
+    <filter srcAddress="host[0]" gate="0"/>
+    <filter srcAddress="burstHostSrc" gate="1"/>
+  </experiment>
+  <experiment id="5.1">
+    <filter destPort='100' gate='0'/>
+    <filter srcAddress='host[0]' destPort='100' gate='0'/>
+  </experiment>
+</filters>
